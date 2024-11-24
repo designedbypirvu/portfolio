@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 <head>
   <title>Cristian Pirvu - UX/UI Designer</title>
@@ -92,7 +93,7 @@
                     <li class="slider--item slider--item-left">
                       <a href="#0">
                         <div class="slider--item-image">
-                          <img src="assets/img/1519905690657.jpeg" alt="Alex Nowak">
+                          <img src="assets/img/1519905690657.jpeg" alt="job1">
                         </div>
                         <p class="slider--item-title">Front End Web Developer</p>
                         <p class="slider--item-description">STARTA DEV, Caransebes<br>Summer Practice<br>July 2021 -
@@ -102,7 +103,7 @@
                     <li class="slider--item slider--item-center">
                       <a href="#0">
                         <div class="slider--item-image">
-                          <img src="assets/img/ezgif.com-webp-to-jpg-2.png" alt="Metiew and Smith">
+                          <img src="assets/img/ezgif.com-webp-to-jpg-2.png" alt="job2">
                         </div>
                         <p class="slider--item-title">Full Stack Web Development</p>
                         <p class="slider--item-description">Nokia Networks, Timisoara<br>Faculty Project<br>February
@@ -112,11 +113,21 @@
                     <li class="slider--item slider--item-right">
                       <a href="#0">
                         <div class="slider--item-image">
-                          <img src="assets/img/ezgif.com-webp-to-jpg.png" alt="Victory">
+                          <img src="assets/img/ezgif.com-webp-to-jpg.png" alt="job3">
                         </div>
                         <p class="slider--item-title">Development Consultant</p>
                         <p class="slider--item-description">SAP Romania, Timisoara<br>Internship<br>August 2022 -
                           September 2023</p>
+                      </a>
+                    </li>
+                    <li class="slider--item slider--item-right">
+                      <a href="#0">
+                        <div class="slider--item-image">
+                          <img src="assets/img/infoghid.png" alt="job4">
+                        </div>
+                        <p class="slider--item-title">Web Developer</p>
+                        <p class="slider--item-description">Gemini Infoghid, Caransebes<br>Full-time<br>June 2024 -
+                          Present</p>
                       </a>
                     </li>
                   </ul>
@@ -197,13 +208,13 @@
                   <div class="modal">
                     <div class="modal--information">
                       <p>Timisoara, Romania</p>
-                      <a href="mailto:ouremail@gmail.com">pirvucristian3@yahoo.com</a>
-                      <a href="tel:+148126287560">+40771776581</a>
+                      <a href="mailto:pirvucristian3@yahoo.com">pirvucristian3@yahoo.com</a>
+                      <a href="tel:+40771776581">+40771776581</a>
                     </div>
                     <ul class="modal--options">
-                      <li><a href="https://www.linkedin.com/in/cristian-pirvu-432550203/" target="_blank">LinkedIn</a>
+                      <li><a href="https://www.linkedin.com/in/pirvucristian/" target="_blank">LinkedIn</a>
                       </li>
-                      <li><a href="#0">Download CV</a></li>
+                      <li><a href="https://tan-rianon-2.tiiny.site/">Download CV</a></li>
                       <li><a href="mailto:pirvucristian3@yahoo.com">Contact Me</a></li>
                     </ul>
                   </div>
@@ -256,7 +267,7 @@
                       <input id="opt-4" type="checkbox" value="motion design">
                     </span>
                     <span class="options-b">
-                      <input id="opt-4" type="checkbox" value="motion design">
+                      <input id="opt-4" type="checkbox" value="graphic design">
                       <label for="opt-4">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -288,8 +299,8 @@
                       <label for="name">Name</label>
                     </div>
                     <div class="information-name">
-                      <input id="name" type="text" spellcheck="false">
-                      <label for="name">Company</label>
+                      <input id="company" type="text" spellcheck="false">
+                      <label for="company">Company</label>
                     </div>
                     <div class="information-email">
                       <input id="email" type="email" spellcheck="false">
@@ -319,6 +330,37 @@
     window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
   </script>
   <script src="assets/js/functions-min.js"></script>
+  <script>
+    emailjs.init("GSGrIkpmQPrhz_ZE4");
+  
+    document.querySelector("input[type='submit']").addEventListener("click", function (event) {
+      event.preventDefault(); 
+  
+      const name = document.getElementById("name").value;
+      const company = document.querySelectorAll("company").value; 
+      const email = document.getElementById("email").value;
+  
+      const templateParams = {
+        name: name,
+        company: company,
+        email: email,
+      };
+  
+      // Send email
+      emailjs
+        .send("service_nkz24z9", "template_q398mld", templateParams)
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Thank you for reaching out! I will get in touch with you as soon as possible!");
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("Failed to send the request. Please try again.");
+          }
+        );
+    });
+  </script>
 </body>
 
 </html>
