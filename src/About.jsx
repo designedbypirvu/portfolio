@@ -5,11 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 import DecryptedText from './DecryptedText';
 import ProfileCard from './ProfileCard';
+import cvPdf from './assets/CV.pdf';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const containerRef = useRef();
+
+  const handleViewCV = () => {
+    window.open(cvPdf, '_blank');
+  };
 
   useGSAP(() => {
 
@@ -204,6 +209,7 @@ export default function About() {
               handle="pirvucristian"
               status="On LinkedIn"
               contactText="View CV"
+              onContactClick={handleViewCV}
               behindGlowEnabled={true}
               enableTilt={true}
               innerGradient="linear-gradient(145deg, rgba(63,129,224,0.15) 0%, rgba(240,237,232,0.05) 100%)"
