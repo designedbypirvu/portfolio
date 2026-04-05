@@ -256,8 +256,8 @@ const Footer = ({ onNavClick }) => {
             <h4>SOCIALS</h4>
             <ul className="footer-social-links">
               <li><a href="https://www.linkedin.com/in/pirvucristian">LinkedIn</a></li>
-              <li><a href="https://github.com/cristianpirvu">GitHub</a></li>
-              <li><a href="https://www.instagram.com/cristian.pirvu/">Instagram</a></li>
+              <li><a href="https://github.com/designedbypirvu">GitHub</a></li>
+              <li><a href="https://www.instagram.com/pirvu_cristian_/">Instagram</a></li>
             </ul>
           </div>
           <div className="footer-col">
