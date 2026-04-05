@@ -44,7 +44,7 @@ const projectsData = [
       "https://i.imgur.com/6QmHgSM.gif",
     
     
-    link: "#",
+    link: "https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-600nw-2450891047.jpg",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const projectsData = [
       "https://i.imgur.com/Fsa9j0Q.gif",
     
     
-    link: "#",
+    link: "https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-600nw-2450891047.jpg",
   },
 ];
 
