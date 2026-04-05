@@ -231,8 +231,8 @@ const Footer = ({ onNavClick }) => {
         </h2>
         
         <div className="footer-cta footer-reveal">
-          <a href="mailto:hello@cristianpirvu.com" className="footer-email-link">
-            hello@cristianpirvu.com
+          <a href="mailto:pirvucristian3@yahoo.com" className="footer-email-link">
+            pirvucristian3@yahoo.com
             <span className="footer-email-line"></span>
           </a>
           </div>
