@@ -18,7 +18,7 @@ const projectsData = [
       "https://i.imgur.com/FYzkpIs.gif",
     
     
-    link: "#",
+    link: "https://spotifycadence.vercel.app",
   },
   {
     id: 2,
