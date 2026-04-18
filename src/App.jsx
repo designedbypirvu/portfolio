@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 gsap.registerPlugin(ScrollTrigger);
 import Cursor from './Cursor';
@@ -272,6 +273,7 @@ function App() {
           </>
         )}
       </div>
+      <SpeedInsights />
     </>
   );
 }
